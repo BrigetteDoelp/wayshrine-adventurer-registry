@@ -19,10 +19,29 @@ class AdventurerRegistry extends Component {
     console.log(heritageList, classList, subClassList)
   }
 
-
   render() {
     return (
-      <h1> AAAAHHHHH </h1>
+      <section>
+         <form>
+          <label>Name :</label>
+          <input />
+          <label>Heritage :</label>
+          <select id='heritage' className='dropdown' name='heritage-select'>
+            <option value='question'>Choose your heritage</option>
+          </select>
+          <label>Class :</label>
+          <select id='class' className='dropdown' name='class-select'>
+            <option value='question'>Choose your class</option>
+          </select>
+          <label>SubClass :</label>
+          <select id='subclass' className='dropdown' name='destisubclassnation-select'>
+            <option value='question'>Choose your subclass</option>
+          </select>
+          <label>Personal Info :</label>
+          <textarea></textarea>
+          <button>Register Adventurer</button>
+         </form>
+      </section>
     )
   }
 
