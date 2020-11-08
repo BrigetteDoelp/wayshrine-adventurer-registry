@@ -1,12 +1,22 @@
 import React from 'react';
 import { Component } from 'react';
+import { getHeritage, getClasses, getSubClasses } from '../../apiCalls.js';
 
 class AdventurerRegistry extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      woo: 'yay'
+      heritages: ''
     }
+  }
+
+  async componentDidMount() {
+    let heritageList = await getHeritage()
+    let classList = await getClasses()
+    let subClassList = await getSubClasses()
+
+    this.setState({heritages: heritageList})
+    console.log(heritageList, classList, subClassList)
   }
 
 
@@ -17,6 +27,6 @@ class AdventurerRegistry extends Component {
   }
 
 
-}
+};
 
 export default AdventurerRegistry;
