@@ -1,12 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import WelcomePage from '../WelcomePage/WelcomePage.js';
 import AdventurerRegistry from '../AdventurerRegistry/AdventurerRegistry.js';
 import AdventurerRoster from '../AdventurerRoster/AdventurerRoster.js';
-
-
-
 
 class App extends Component {
   constructor(props) {
@@ -31,13 +28,12 @@ class App extends Component {
             </Route>
           </Switch>
         </main>
-
+      </BrowserRouter>
 
     )
   }
 
 
-
-
-
 }
+
+export default App;
