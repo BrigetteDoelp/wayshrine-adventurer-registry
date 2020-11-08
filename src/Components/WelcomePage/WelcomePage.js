@@ -11,7 +11,6 @@ const WelcomePage = () => {
         <button>Move to Registry</button>
       </Link>
     </section>
-
   )
 }
 
