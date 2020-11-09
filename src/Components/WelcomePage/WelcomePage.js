@@ -9,7 +9,7 @@ const WelcomePage = () => {
     <section className='welcomePage'>
       <h1 className='pageName'>Adventurer Registry</h1>
       <Link to='/registry'>
-        <button>Move to Registry</button>
+        <button className='toRegistryButton'>Move to Registry</button>
       </Link>
     </section>
   )
