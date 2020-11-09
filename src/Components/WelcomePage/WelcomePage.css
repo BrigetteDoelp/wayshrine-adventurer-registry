@@ -12,12 +12,11 @@
   font-family: 'Princess Sofia'
 }
 
-button {
+.toRegistryButton {
   width: 30vw;
   height: 10vw;
   margin-bottom: 20vh;
   font-family: 'Oswald';
   font-size: 6vh;
-  /* border: none; */
   background: none;
 }
