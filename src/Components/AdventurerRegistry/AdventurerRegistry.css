@@ -1,7 +1,11 @@
 .formArea {
   width: 25vw;
   height: 100vh;
-  position: relative;
+  position: fixed;
+  border-right: solid 3px #121316;
+  padding-right: .5em;
+  padding-left: .5em;
+
 }
 
 .registryForm {
@@ -9,9 +13,14 @@
   flex-direction: column;
 }
 
-.name-label, .heritage-label, .class-label, .subclass-label, .personalinfo-label {
+.name-label, .heritage-label, .class-label, .subclass-label, .personalinfo-label, .registrytitle {
   font-size: 3vh;
   font-family: 'Oswald'
+}
+
+.registrytitle {
+  text-align: center;
+  text-decoration: underline;
 }
 
 .name-area, .heritage-area, .class-area, .subclass-area, .personalinfo-area {

@@ -15,8 +15,11 @@ const AdventurerRoster = (props) => {
   })
 
   return (
-    <section className='profilearea'>
-      { allProfiles }
+    <section className='rosterarea'>
+      <h2 className='rostertitle'>Active Adventurer Roster</h2>
+      <section className='profilearea'>
+        { allProfiles }
+      </section>
     </section>
   )
 }
