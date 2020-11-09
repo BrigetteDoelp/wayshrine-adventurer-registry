@@ -2,6 +2,9 @@ import React from 'react';
 import { Component } from 'react';
 import AdventurerProfile from '../AdventurerProfile/AdventurerProfile.js';
 import App from '../App/App.js';
+import './AdventurerRoster.css'
+import skull from '../../Assets/danger.png';
+import heart from '../../Assets/love.png';
 
 
 const AdventurerRoster = (props) => {
@@ -12,9 +15,9 @@ const AdventurerRoster = (props) => {
   })
 
   return (
-    <article>
+    <section className='profilearea'>
       { allProfiles }
-    </article>
+    </section>
   )
 }
 

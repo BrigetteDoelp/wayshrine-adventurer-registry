@@ -1,0 +1,54 @@
+.ass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #121316;
+  height: 50vh;
+  width: 20vw;
+  overflow: scroll;
+  margin: 1.5vw;
+}
+
+.top, .classes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.top {
+  border-bottom: solid 1px #121316;
+}
+
+.heritage {
+  text-align:center;
+}
+
+.heart, .skull {
+  width: 5vh;
+  height: 5vh;
+}
+
+.name {
+
+}
+
+.heritage {
+
+}
+
+.class {
+
+}
+
+.subclass {
+
+}
+
+.personalInfo {
+
+}
