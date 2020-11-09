@@ -12,9 +12,9 @@ const AdventurerRoster = (props) => {
   })
 
   return (
-    <article>
+    <section className='profilearea'>
       { allProfiles }
-    </article>
+    </section>
   )
 }
 
