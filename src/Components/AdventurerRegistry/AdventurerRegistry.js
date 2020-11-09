@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import { getHeritage, getClasses, getSubClasses } from '../../apiCalls.js';
+import './AdventurerRegistry.css'
 
 class AdventurerRegistry extends Component {
   constructor(props) {
@@ -68,28 +69,38 @@ class AdventurerRegistry extends Component {
       return <h1>Gathering Registry Information</h1>
     }
     return (
-      <section>
-         <form onSubmit={this.submitProfile}>
-          <label>Name :</label>
-          <input name='name' value={this.state.name} onChange={this.updateState} />
-          <label>Heritage :</label>
-          <select onChange={this.updateState} value={this.state.heritage} id='heritage' className='dropdown' name='chosenHeritage'>
-            <option value='notchosen'>Choose your heritage</option>
-            {this.getHeritageNames()}
-          </select>
-          <label>Class :</label>
-          <select onChange={this.updateState} value={this.state.class} id='class' className='dropdown' name='chosenClass'>
-            <option value='notchosen'>Choose your class</option>
-            {this.getClassNames()}
-          </select>
-          <label>SubClass :</label>
-          <select onChange={this.updateState} value={this.state.subclass} id='subclass' className='dropdown' name='chosenSubClass'>
-            <option value='notchosen'>Choose your subclass</option>
-            {this.getSubClassNames()}
-          </select>
-          <label>Personal Info :</label>
-          <textarea name='personalInfo' value={this.state.personalInfo} onChange={this.updateState}></textarea>
-          <button  type='submit'>Register Adventurer</button>
+      <section className='formArea'>
+         <form className='registryForm' onSubmit={this.submitProfile}>
+          <section className='name-area'>
+           <label className='name-label'>Name:</label>
+           <input name='name' value={this.state.name} onChange={this.updateState} />
+          </section>
+          <section className='heritage-area'>
+           <label className='heritage-label'>Heritage:</label>
+           <select onChange={this.updateState} value={this.state.heritage} id='heritage' className='dropdown' name='chosenHeritage'>
+             <option value='notchosen'>Choose your heritage</option>
+             {this.getHeritageNames()}
+           </select>
+          </section>
+          <section className='class-area'>
+           <label className='class-label'>Class:</label>
+           <select onChange={this.updateState} value={this.state.class} id='class' className='dropdown' name='chosenClass'>
+             <option value='notchosen'>Choose your class</option>
+             {this.getClassNames()}
+           </select>
+          </section>
+          <section className='subclass-area'>
+           <label className='subclass-label'>SubClass:</label>
+           <select onChange={this.updateState} value={this.state.subclass} id='subclass' className='dropdown' name='chosenSubClass'>
+             <option value='notchosen'>Choose your subclass</option>
+              {this.getSubClassNames()}
+           </select>
+          </section>
+          <section className='personalinfo-area'>
+           <label className='personalinfo-label'>Personal Info:</label>
+           <textarea name='personalInfo' value={this.state.personalInfo} onChange={this.updateState}></textarea>
+          </section>
+          <button type='submit'>Register Adventurer</button>
          </form>
       </section>
     )
