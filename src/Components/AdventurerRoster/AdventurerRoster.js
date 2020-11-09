@@ -1,23 +1,21 @@
 import React from 'react';
 import { Component } from 'react';
+import AdventurerProfile from '../AdventurerProfile/AdventurerProfile.js';
+import App from '../App/App.js';
 
 
-class AdventurerRoster extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      woo: 'yay'
-    }
-  }
+const AdventurerRoster = (props) => {
+  const allProfiles = []
 
+  props.roster.forEach(profile => {
+    allProfiles.push(<AdventurerProfile {...profile} />)
+  })
 
-  render() {
-    return (
-      <h1> AAAAHHHHH </h1>
-    )
-  }
-
-
+  return (
+    <article>
+      { allProfiles }
+    </article>
+  )
 }
 
 export default AdventurerRoster;
