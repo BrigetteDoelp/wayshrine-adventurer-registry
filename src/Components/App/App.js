@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import WelcomePage from '../WelcomePage/WelcomePage.js';
 import AdventurerRegistry from '../AdventurerRegistry/AdventurerRegistry.js';
 import AdventurerRoster from '../AdventurerRoster/AdventurerRoster.js';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -25,8 +26,10 @@ class App extends Component {
         <main className='App'>
           <Switch>
             <Route path='/registry'>
-              <AdventurerRegistry updateRoster={this.updateRoster}/>
-              <AdventurerRoster roster={this.state.roster}/>
+              <section className='mainarea'>
+                <AdventurerRegistry updateRoster={this.updateRoster}/>
+                <AdventurerRoster roster={this.state.roster}/>
+              </section>
             </Route>
             <Route path='/'>
               <WelcomePage />
