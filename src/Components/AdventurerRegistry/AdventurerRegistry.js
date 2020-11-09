@@ -69,7 +69,7 @@ class AdventurerRegistry extends Component {
       return <h1>Gathering Registry Information</h1>
     }
     return (
-      <section className='formArea'>
+      <section data-testid='formarea' className='formArea'>
        <h3 className='registrytitle'>Register Here</h3>
        <form className='registryForm' onSubmit={this.submitProfile}>
         <section className='name-area'>
