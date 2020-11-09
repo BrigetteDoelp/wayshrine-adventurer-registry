@@ -6,9 +6,6 @@ class AdventurerRegistry extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      heritages: '',
-      classes: '',
-      subclasses: '',
       name: '',
       chosenHeritage: '',
       chosenClass: '',
@@ -39,53 +36,59 @@ class AdventurerRegistry extends Component {
 
   getHeritageNames() {
     let names = this.registryInfo.heritages.map(heritage => {
-      return <option value='question'>{heritage.name}</option>
+      return <option value={heritage.name}>{heritage.name}</option>
     })
     return names
   }
 
   getClassNames() {
     let names = this.registryInfo.classes.map(singleClass => {
-      return <option value='question'>{singleClass.name}</option>
+      return <option value={singleClass.name}>{singleClass.name}</option>
     })
     return names
   }
 
   getSubClassNames() {
     let names = this.registryInfo.subclasses.map(subclass => {
-      return <option value='question'>{subclass.name}</option>
+      return <option value={subclass.name}>{subclass.name}</option>
     })
     return names
   }
 
+  updateState = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
   render() {
-    if (!this.registryInfo.heritages || !this.registryInfo.classes || !this.state.subclasses) {
+    if (!this.registryInfo.heritages || !this.registryInfo.classes || !this.registryInfo.subclasses) {
       return <h1>Gathering Registry Information</h1>
     }
     return (
       <section>
          <form>
           <label>Name :</label>
-          <input />
+          <input name='name' onChange={this.updateState} />
           <label>Heritage :</label>
-          <select id='heritage' className='dropdown' name='heritage-select'>
-            <option value='question'>Choose your heritage</option>
+          <select onChange={this.updateState} id='heritage' className='dropdown' name='chosenHeritage'>
+            <option value='notchosen'>Choose your heritage</option>
             {this.getHeritageNames()}
           </select>
           <label>Class :</label>
-          <select id='class' className='dropdown' name='class-select'>
-            <option value='question'>Choose your class</option>
+          <select onChange={this.updateState} id='class' className='dropdown' name='chosenClass'>
+            <option value='notchosen'>Choose your class</option>
             {this.getClassNames()}
           </select>
           <label>SubClass :</label>
-          <select id='subclass' className='dropdown' name='destisubclassnation-select'>
-            <option value='question'>Choose your subclass</option>
+          <select onChange={this.updateState} id='subclass' className='dropdown' name='chosenSubClass'>
+            <option value='notchosen'>Choose your subclass</option>
             {this.getSubClassNames()}
           </select>
           <label>Personal Info :</label>
-          <textarea></textarea>
+          <textarea name='personalInfo' onChange={this.updateState}></textarea>
           <button>Register Adventurer</button>
          </form>
+         <article className>
+         </article>
       </section>
     )
   }
