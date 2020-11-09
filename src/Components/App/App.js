@@ -6,13 +6,18 @@ import AdventurerRegistry from '../AdventurerRegistry/AdventurerRegistry.js';
 import AdventurerRoster from '../AdventurerRoster/AdventurerRoster.js';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      needThis: 'idk'
+      roster: [],
     }
   }
 
+  updateRoster = (profile) => {
+    let newProfile = {...profile, id: Date.now()}
+    let roster = [... this.state.roster, newProfile]
+    this.setState({ roster })
+  }
 
   render() {
     return (
@@ -20,8 +25,8 @@ class App extends Component {
         <main className='App'>
           <Switch>
             <Route path='/registry'>
-              <AdventurerRegistry />
-              <AdventurerRoster />
+              <AdventurerRegistry updateRoster={this.updateRoster}/>
+              <AdventurerRoster roster={this.state.roster}/>
             </Route>
             <Route path='/'>
               <WelcomePage />
