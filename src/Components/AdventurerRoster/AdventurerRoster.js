@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import AdventurerProfile from '../AdventurerProfile/AdventurerProfile.js';
 import App from '../App/App.js';
+import { PropTypes } from 'prop-types';
 import './AdventurerRoster.css'
 import skull from '../../Assets/danger.png';
 import heart from '../../Assets/love.png';
@@ -22,6 +23,10 @@ const AdventurerRoster = (props) => {
       </section>
     </section>
   )
+}
+
+AdventurerRoster.proptype = {
+  roster: PropTypes.array
 }
 
 export default AdventurerRoster;

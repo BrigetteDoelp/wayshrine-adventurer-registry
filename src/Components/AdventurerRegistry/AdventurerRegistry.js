@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { getHeritage, getClasses, getSubClasses } from '../../apiCalls.js';
 import './AdventurerRegistry.css'
 
@@ -107,8 +108,10 @@ class AdventurerRegistry extends Component {
       </section>
     )
   }
-
-
 };
+
+AdventurerRegistry.proptype = {
+  updateRoster: PropTypes.function
+}
 
 export default AdventurerRegistry;
