@@ -2,7 +2,6 @@ import { render, waitFor, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import AdventurerRegistry from '../AdventurerRegistry/AdventurerRegistry.js';
 import AdventurerRoster from '../AdventurerRoster/AdventurerRoster.js';
-
 import { getHeritage, getClasses, getSubClasses } from '../../apiCalls.js';
 
 jest.mock('../../apiCalls.js')
