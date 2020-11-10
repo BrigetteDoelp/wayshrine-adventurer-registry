@@ -16,8 +16,8 @@ const AdventurerRoster = (props) => {
 
   return (
     <section className='rosterarea'>
-      <h2 className='rostertitle'>Active Adventurer Roster</h2>
-      <section className='profilearea'>
+      <h2 data-testid='rostertitle' className='rostertitle'>Active Adventurer Roster</h2>
+      <section data-testid='profilearea' className='profilearea'>
         { allProfiles }
       </section>
     </section>
