@@ -12,6 +12,7 @@ class AdventurerRegistry extends Component {
       chosenClass: '',
       chosenSubClass: '',
       personalInfo: '',
+      loaded: false,
     }
     this.registryInfo = {
       heritages: '',
@@ -29,7 +30,7 @@ class AdventurerRegistry extends Component {
     this.registryInfo.classes = classList.results
     this.registryInfo.subclasses = subClassList.results
 
-    this.setState({subclasses: subClassList.results})
+    this.setState({loaded: true})
   }
 
   getHeritageNames() {
@@ -69,39 +70,40 @@ class AdventurerRegistry extends Component {
       return <h1>Gathering Registry Information</h1>
     }
     return (
-      <section className='formArea'>
-         <form className='registryForm' onSubmit={this.submitProfile}>
-          <section className='name-area'>
-           <label className='name-label'>Name:</label>
-           <input name='name' value={this.state.name} onChange={this.updateState} />
-          </section>
-          <section className='heritage-area'>
-           <label className='heritage-label'>Heritage:</label>
-           <select onChange={this.updateState} value={this.state.heritage} id='heritage' className='dropdown' name='chosenHeritage'>
-             <option value='notchosen'>Choose your heritage</option>
-             {this.getHeritageNames()}
-           </select>
-          </section>
-          <section className='class-area'>
-           <label className='class-label'>Class:</label>
-           <select onChange={this.updateState} value={this.state.class} id='class' className='dropdown' name='chosenClass'>
-             <option value='notchosen'>Choose your class</option>
-             {this.getClassNames()}
-           </select>
-          </section>
-          <section className='subclass-area'>
-           <label className='subclass-label'>SubClass:</label>
-           <select onChange={this.updateState} value={this.state.subclass} id='subclass' className='dropdown' name='chosenSubClass'>
-             <option value='notchosen'>Choose your subclass</option>
-              {this.getSubClassNames()}
-           </select>
-          </section>
-          <section className='personalinfo-area'>
-           <label className='personalinfo-label'>Personal Info:</label>
-           <textarea name='personalInfo' value={this.state.personalInfo} onChange={this.updateState}></textarea>
-          </section>
-          <button type='submit'>Register Adventurer</button>
-         </form>
+      <section data-testid='formarea' className='formArea'>
+       <h3 data-testid='registrytitle' className='registrytitle'>Register Here</h3>
+       <form className='registryForm' >
+        <section className='name-area'>
+         <label className='name-label'>Name:</label>
+         <input data-testid='nameinput' name='name' value={this.state.name} onChange={this.updateState} />
+        </section>
+        <section className='heritage-area'>
+         <label className='heritage-label'>Heritage:</label>
+         <select data-testid='heritageselect' onChange={this.updateState} value={this.state.heritage} id='heritage' className='dropdown' name='chosenHeritage'>
+           <option value='notchosen'>Choose your heritage</option>
+           {this.getHeritageNames()}
+         </select>
+        </section>
+        <section className='class-area'>
+         <label className='class-label'>Class:</label>
+         <select data-testid='classselect' onChange={this.updateState} value={this.state.class} id='class' className='dropdown' name='chosenClass'>
+           <option value='notchosen'>Choose your class</option>
+           {this.getClassNames()}
+         </select>
+        </section>
+        <section className='subclass-area'>
+         <label className='subclass-label'>SubClass:</label>
+         <select data-testid='subclassselect' onChange={this.updateState} value={this.state.subclass} id='subclass' className='dropdown' name='chosenSubClass'>
+           <option value='notchosen'>Choose your subclass</option>
+            {this.getSubClassNames()}
+         </select>
+        </section>
+        <section className='personalinfo-area'>
+         <label className='personalinfo-label'>Personal Info:</label>
+         <textarea data-testid='personalinfoinput' name='personalInfo' value={this.state.personalInfo} onChange={this.updateState}></textarea>
+        </section>
+        <button onClick={this.submitProfile} data-testid='registerbutton' type='submit'>Register Adventurer</button>
+       </form>
       </section>
     )
   }

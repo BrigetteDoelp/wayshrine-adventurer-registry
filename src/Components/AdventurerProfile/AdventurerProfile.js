@@ -9,9 +9,9 @@ const AdventurerProfile = (props) => {
   return (
     <article className='profileCard'>
       <section className='top'>
-        <img className='heart' alt='heart' src={heart}/>
+        <img data-testid='heart' className='heart' alt='heart' src={heart}/>
         <h3 className='name'>{props.name}</h3>
-        <img className='skull' alt='skull' src={skull}/>
+        <img data-testid='skull' className='skull' alt='skull' src={skull}/>
       </section>
       <section className='heritage'>
         <h5 className='heritage'>{props.chosenHeritage}</h5>

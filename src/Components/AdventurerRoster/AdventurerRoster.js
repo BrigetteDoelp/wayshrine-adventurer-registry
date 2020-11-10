@@ -11,12 +11,15 @@ const AdventurerRoster = (props) => {
   const allProfiles = []
 
   props.roster.forEach(profile => {
-    allProfiles.push(<AdventurerProfile {...profile} />)
+    allProfiles.push(<AdventurerProfile profile={{...profile}} />)
   })
 
   return (
-    <section className='profilearea'>
-      { allProfiles }
+    <section className='rosterarea'>
+      <h2 data-testid='rostertitle' className='rostertitle'>Active Adventurer Roster</h2>
+      <section data-testid='profilearea' className='profilearea'>
+        { allProfiles }
+      </section>
     </section>
   )
 }
