@@ -1,16 +1,12 @@
-.ass {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .profileCard {
   display: flex;
   flex-direction: column;
-  border: solid 1px #121316;
-  height: 50vh;
-  width: 20vw;
-  overflow: scroll;
+  border: solid 2px #121316;
+  border-radius: 4px;
+  max-height: 30em;
+  max-width: 21em;
+  min-height: 30em;
+  min-width: 21em;
   margin: 1.5vw;
 }
 
@@ -21,11 +17,11 @@
 }
 
 .top {
-  border-bottom: solid 1px #121316;
+  border-bottom: solid 2px #121316;
 }
 
 .heritage {
-  text-align:center;
+  text-align: center;
 }
 
 .heart, .skull {
@@ -33,22 +29,56 @@
   height: 5vh;
 }
 
-.name {
+.heart {
+  margin-top: .6em;
+  margin-left: .55em;
+  margin-right: .35em;
+}
 
+.skull {
+  margin-top: .6em;
+  margin-right: .55em;
+  margin-left: .35em;
+}
+
+.nameArea {
+  border-right: solid 2px #121316;
+  border-left: solid 2px #121316;
+  width: 14em;
+}
+
+.classes {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: -1.3em;
+  border-top: solid 2px #121316;
+}
+
+.name {
+  font-family: 'Raleway';
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.heritageArea {
+  margin-top: -1em;
+  margin-bottom: -1em;
 }
 
 .heritage {
-
+  font-family: 'Raleway';
+  font-size: 1.3em;
 }
 
-.class {
-
-}
-
-.subclass {
-
+.class, .subclass {
+  font-family: 'Raleway';
+  font-size: 1em;
 }
 
 .personalInfo {
-
+  overflow: scroll;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-top: solid 2px #121316;
 }

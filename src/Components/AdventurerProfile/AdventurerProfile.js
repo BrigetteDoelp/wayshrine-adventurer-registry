@@ -10,10 +10,12 @@ const AdventurerProfile = (props) => {
     <article className='profileCard'>
       <section className='top'>
         <img data-testid='heart' className='heart' alt='heart' src={heart}/>
-        <h3 className='name'>{props.name}</h3>
+        <div className='nameArea'>
+          <h3 className='name'>{props.name}</h3>
+        </div>
         <img data-testid='skull' className='skull' alt='skull' src={skull}/>
       </section>
-      <section className='heritage'>
+      <section className='heritageArea'>
         <h5 className='heritage'>{props.chosenHeritage}</h5>
       </section>
       <section className='classes'>
