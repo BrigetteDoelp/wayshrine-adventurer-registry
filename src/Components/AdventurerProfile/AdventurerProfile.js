@@ -1,6 +1,7 @@
 import React from 'react';
 import AdventurerRegistry from '../AdventurerRegistry/AdventurerRegistry.js';
 import './AdventurerProfile.css';
+import { PropTypes } from 'prop-types';
 import skull from '../../Assets/danger.png';
 import heart from '../../Assets/love.png';
 
@@ -25,6 +26,16 @@ const AdventurerProfile = (props) => {
       <p className='personalInfo'>{props.personalInfo}</p>
     </article>
   )
+}
+
+AdventurerProfile.proptype = {
+    chosenClass: PropTypes.string,
+    chosenHeritage: PropTypes.string,
+    chosenSubClass: PropTypes.string,
+    id: PropTypes.any,
+    loaded: PropTypes.any,
+    name: PropTypes.string,
+    personalInfo: PropTypes.string,
 }
 
 export default AdventurerProfile;
