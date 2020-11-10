@@ -1,7 +1,5 @@
 # Wayshrine Guild ; Adventurer Registry
 
-![Adventurer Registry]()
-
 This application focuses on giving the user a place to feel and process their emotions. They are given a space to reflect, to breathe, and to just ruminate.
 
 ## Developers
@@ -21,50 +19,29 @@ This application focuses on giving the user a place to feel and process their em
  ```
 
 ## Goals and Objectives
--
+- Create a spin up an MPV of my own design
+- Robust testing suite
+- Make good use of `React.js` and `Router`
 
 
 ## Wins & Challenges
 #### Wins:
-All of us envisioning and then building out animations in a brand new, self taught technology. <br>
-Setting realistic goals and meeting those goals. <br>
-<<more to come from other team mates>> <br>
+Creating an application of my own that's been bouncing around in my head for a while now.
+
 
 #### Challenges:
-Implementing audio into the application.<br>
-Figuring out the quirks of the new technologies, and working to make them play nice with the rest of the application.<br>
-<<more to come from other team mates>><br>
-
-
-## Under the Hood
-<<explain some decisions in the code we made, and WHY we made those decisions>>
+Getting the 'ideabox' aspect of the application to render properly.
 
 ## Functionality Showcase
 
 <p align="center"></br>
-  <img width="460" height="300" src="" alt="Home Page Gif">
+  <img src="src/Assets/roster.png" alt="roster page" width="600">
 </p><br>
 
 <p align="center"></br>
-  <img width="460" height="300" src="" alt="Tour Of Reflection Rooms">
+  <img width="460" height="300" src="src/Assets/registryform.png" alt="adventurer create form">
 </p><br>
 
 <p align="center"></br>
-  <img width="460" height="300" src="" alt="Fine Feeling Room">
+  <img width="460" height="300" src="src/Assets/charactercards.png" alt="example of cards">
 </p><br>
-
-<p align="center"></br>
-  <img width="460" height="300" src="" alt="Anxiety Feeling Room">
-</p><br>
-
-<p align="center"></br>
-  <img width="460" height="300" src="" alt="Sad Feeling Room">
-</p><br>
-
-<p align="center"></br>
-  <img width="460" height="300" src="" alt="Angry Feeling Room">
-</p><br>
-
-## Credits to mentors!
-
-### Credits to pets, specifically Laika's insightful input over the course of the project.
