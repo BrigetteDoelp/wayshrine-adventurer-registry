@@ -39,7 +39,7 @@ Getting the 'ideabox' aspect of the application to render properly.
 </p><br>
 
 <p align="center"></br>
-  <img width="460" height="300" src="src/Assets/registryform.png" alt="adventurer create form">
+  <img width="460" height="800" src="src/Assets/registryform.png" alt="adventurer create form">
 </p><br>
 
 <p align="center"></br>
