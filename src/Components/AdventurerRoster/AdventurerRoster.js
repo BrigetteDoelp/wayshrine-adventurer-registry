@@ -11,7 +11,7 @@ const AdventurerRoster = (props) => {
   const allProfiles = []
 
   props.roster.forEach(profile => {
-    allProfiles.push(<AdventurerProfile profile={{...profile}} />)
+    allProfiles.push(<AdventurerProfile {...profile} />)
   })
 
   return (
