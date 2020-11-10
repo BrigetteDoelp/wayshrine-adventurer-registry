@@ -35,7 +35,7 @@ Getting the 'ideabox' aspect of the application to render properly.
 ## Functionality Showcase
 
 <p align="center"></br>
-  <img src="src/Assets/roster.png" alt="roster page" width="600">
+  <img src="src/Assets/roster.png" alt="roster page" width="700">
 </p><br>
 
 <p align="center"></br>
