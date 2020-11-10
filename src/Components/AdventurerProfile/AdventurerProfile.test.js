@@ -10,6 +10,9 @@ describe('AdventurerProfile', () => {
       render(<AdventurerProfile profile={{}}/>)
       const heart = screen.getByTestId('heart')
       const skull = screen.getByTestId('skull')
+
+      expect(heart).toBeInTheDocument()
+      expect(skull).toBeInTheDocument()
     });
   })
 })
