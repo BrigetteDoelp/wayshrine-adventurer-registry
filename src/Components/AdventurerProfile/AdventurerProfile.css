@@ -30,15 +30,15 @@
 }
 
 .heart {
-  margin-top: .9em;
+  margin-top: .6em;
   margin-left: .55em;
-  /* margin-bottom: .2em; */
+  margin-right: .35em;
 }
 
 .skull {
-  margin-top: .9em;
+  margin-top: .6em;
   margin-right: .55em;
-  /* margin-bottom: .2em; */
+  margin-left: .35em;
 }
 
 .nameArea {
@@ -68,19 +68,11 @@
 .heritage {
   font-family: 'Raleway';
   font-size: 1.3em;
-
 }
 
-.class {
+.class, .subclass {
   font-family: 'Raleway';
   font-size: 1em;
-
-}
-
-.subclass {
-  font-family: 'Raleway';
-  font-size: 1em;
-
 }
 
 .personalInfo {
