@@ -9,7 +9,7 @@ jest.mock('../../apiCalls.js')
 
 describe('AdventurerRegistry', () => {
 
-  describe('Unit Tests', () => {
+  describe('Tests', () => {
 
     test('Should render registry form', async () => {
       getHeritage.mockResolvedValue({results: ['goblin', 'gnome', 'tiefling']})
@@ -49,7 +49,7 @@ describe('AdventurerRegistry', () => {
       expect(personalinfoinput).toBeInTheDocument()
     });
 
-    test('Should fire a function on button click', async () => {
+    test('Should render profile on button click', async () => {
       getHeritage.mockResolvedValue({results: ['goblin', 'gnome', 'tiefling']})
       getClasses.mockResolvedValue({results: ['sorcerer', 'druid', 'bard']})
       getSubClasses.mockResolvedValue({results: ['necromancer', 'summoner', 'thief']})
