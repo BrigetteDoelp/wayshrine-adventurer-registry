@@ -12,6 +12,9 @@ describe('AdventurerRoster', () => {
       render(<AdventurerRoster roster={[{name: 'Mork', chosenHeritage: 'Goblin', chosenClass: 'sorcerer', choseSubclass: 'necromancer', personalInfo: 'is babey'}]}/>)
       const rostertitle = screen.getByTestId('rostertitle')
       const profilearea = screen.getByTestId('profilearea')
+
+      expect(rostertitle).toBeInTheDocument()
+      expect(profilearea).toBeInTheDocument()
     });
   })
 })
